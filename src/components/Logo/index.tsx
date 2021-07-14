@@ -2,16 +2,17 @@ import * as S from './styles'
 
 export type LogoProps = {
   color?: 'white' | 'black'
+  size?: 'normal' | 'large'
 }
 
-const Logo = ({ color = 'white' }: LogoProps) => (
-  <S.Wrapper color={color}>
+const Logo = ({ color = 'white', size = 'normal' }: LogoProps) => (
+  <S.Wrapper color={color} size={size}>
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="910.667"
-      height="774.667"
       viewBox="0 0 683 581"
+      role="img"
+      aria-label="Juju Soap"
     >
       <path
         fill="currentColor"

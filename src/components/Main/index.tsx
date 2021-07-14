@@ -1,3 +1,4 @@
+import Logo from 'components/Logo'
 import * as S from './styles'
 
 const Main = ({
@@ -5,10 +6,7 @@ const Main = ({
   description = 'Arte em Saboaria Artesanal'
 }) => (
   <S.Wrapper>
-    <S.Logo
-      src="/img/logo.jpg"
-      alt="Logo uma folha com o texto Juju Soap e um coração na direita"
-    />
+    <Logo/>
     <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>
   </S.Wrapper>
