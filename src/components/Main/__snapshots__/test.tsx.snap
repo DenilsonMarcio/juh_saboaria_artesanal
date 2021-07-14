@@ -39,33 +39,23 @@ exports[`<Main /> should render the heading 1`] = `
   font-weight: 400;
 }
 
-.c4 {
-  margin-top: 3rem;
-  width: min(30rem,100%);
-}
-
 <main
   class="c0"
 >
   <img
-    alt="Imagem de um átomo e React Avançado escrito ao lado."
+    alt="Logo uma folha com o texto Juju Soap e um coração na direita"
     class="c1"
-    src="/img/logo.svg"
+    src="/img/logo.jpg"
   />
   <h1
     class="c2"
   >
-    React Avançado
+    Juju Soap
   </h1>
   <h2
     class="c3"
   >
-    TypeScript, ReactJS, NextJS e Styled Components
+    Arte em Saboaria Artesanal
   </h2>
-  <img
-    alt="Um desenvolvedor de frente para uma tela com código."
-    class="c4"
-    src="/img/hero-illustration.svg"
-  />
 </main>
-`
+`;
