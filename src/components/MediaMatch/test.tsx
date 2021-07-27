@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-import 'jest-styled-components'
 
 import MediaMatch from '.'
 
@@ -36,6 +35,4 @@ it('should show or hide based on the media passed ', () => {
     media: '(max-width: 768px)'
   })
 })
-
-
 })
