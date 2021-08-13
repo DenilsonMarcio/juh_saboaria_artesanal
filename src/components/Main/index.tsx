@@ -6,8 +6,8 @@ const Main = ({
   description = 'Arte em Saboaria Artesanal'
 }) => (
   <S.Wrapper>
-    <Logo/>
-     <S.Title>{title}</S.Title>
+    <Logo />
+    <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>
   </S.Wrapper>
 )
