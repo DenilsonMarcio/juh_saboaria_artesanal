@@ -5,7 +5,7 @@ export default {
   title: 'Banner',
   component: Banner,
   args: {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+    img: 'https://source.unsplash.com/1042x580',
     title: 'Sabonete Morango',
     subtitle: '<p>Morango <strong> Silvestre </strong> com pêra</p>',
     buttonLabel: 'Comprar Agora',
