@@ -8,6 +8,7 @@ export default {
     title: 'Sabonete Morango com Pêra',
     description: 'Sabonetes produzidos com morangos orgânicos',
     price: 'R$ 25,00',
+    promotionalPrice: 'R$ 20,00',
     img: 'https://source.unsplash.com/user/willianjusten/300x140'
   }
 } as Meta

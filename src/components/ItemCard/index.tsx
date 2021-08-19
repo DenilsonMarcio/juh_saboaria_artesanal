@@ -10,13 +10,15 @@ export type ItemCardProps = {
   description: string
   img: string
   price: string
+  promotionalPrice?: string
 }
 
-const ItemCard = ({ title, img, description, price }: ItemCardProps) => (
+const ItemCard = ({ title, img, description, price, promotionalPrice }: ItemCardProps) => (
   <S.Wrapper>
     <S.ImageBox>
       <img src={img} alt={title} />
     </S.ImageBox>
+    <S.Content>
     <S.Info>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
@@ -25,9 +27,11 @@ const ItemCard = ({ title, img, description, price }: ItemCardProps) => (
       <FavoriteBorder aria-label="Adicionar ao carrinho de compras" />
     </S.FavButton>
     <S.BuyBox>
-      <S.Price>{price}</S.Price>
+      {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
+      <S.Price>{promotionalPrice || price}</S.Price>
       <Button icon={<AddShoppingCart />} size="small" />
     </S.BuyBox>
+    </S.Content>
   </S.Wrapper>
 )
 

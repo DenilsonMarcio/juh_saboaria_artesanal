@@ -75,8 +75,8 @@ export const FavButton = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     position: absolute;
-    right: .5rem;
-    top: 15rem;
+    right: 0rem;
+    top: -0.5rem;
     cursor: pointer;
     svg {
       width: 2.5rem;

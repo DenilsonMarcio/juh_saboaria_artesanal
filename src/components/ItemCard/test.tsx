@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import theme from 'styles/theme'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
 import ItemCard from '.'
@@ -6,7 +7,7 @@ import ItemCard from '.'
 const props = {
   title: 'Sabonete Morango com Pêra',
   description: 'Sabonetes produzidos com morangos orgânicos',
-  price: 'R$ 25,00',
+  price: 'R$ 200,00',
   img: 'https://source.unsplash.com/user/willianjusten/300x140'
 }
 
@@ -35,5 +36,29 @@ describe('<ItemCard />', () => {
     expect(
       screen.getByLabelText(/adicionar ao carrinho de compras/i)
     ).toBeInTheDocument()
+  })
+
+  it('should render price in label', () => {
+    // renderiza o componente
+    renderWitheTheme(<ItemCard {...props} />)
+    const price = screen.getByText('R$ 200,00')
+    // preço não tenha line-through
+    expect(price).not.toHaveStyle({ textDecoration: 'line-through' })
+    // preço tenha o background secundario
+    expect(price).toHaveStyle({ backgroundColor: theme.colors.secondary })
+  })
+
+  it('should render a line-through in price when promotional', () => {
+    // renderiza o componente promotional  $100
+    renderWitheTheme(<ItemCard {...props} promotionalPrice="R$100,00" />)
+
+    // preço tenha line-through $200
+    expect(screen.getByText('R$ 200,00')).toHaveStyle({
+      textDecoration: 'line-through'
+    })
+    // preço promotional sem o line-through $100
+    expect(screen.getByText('R$100,00')).not.toHaveStyle({
+      textDecoration: 'line-through'
+    })
   })
 })
