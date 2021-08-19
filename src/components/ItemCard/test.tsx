@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import theme from 'styles/theme'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
@@ -59,6 +59,45 @@ describe('<ItemCard />', () => {
     // preço promotional sem o line-through $100
     expect(screen.getByText('R$100,00')).not.toHaveStyle({
       textDecoration: 'line-through'
+    })
+  })
+
+  it('should render a filled Favorite icon when favorite is true ', () => {
+    // renderiza o componente
+    renderWitheTheme(<ItemCard {...props} favorite />)
+
+    // verifica se o icone de favoritos foi renderizado
+    expect(screen.getByLabelText(/remove from wishlist/)).toBeInTheDocument()
+  })
+
+  it('should call onFav method when favorite is clicked ', () => {
+    // função para favoritar
+    const onFav = jest.fn()
+    // renderiza o componente
+    renderWitheTheme(<ItemCard {...props} favorite onFav={onFav} />)
+
+    // Quando clicado no botão de favoritar
+    fireEvent.click(screen.getAllByRole('button')[0])
+    // o metodo é chamado
+    expect(onFav).toBeCalled()
+  })
+
+  it('should render Ribbon', () => {
+    renderWitheTheme(
+      <ItemCard
+        {...props}
+        ribbon="My Ribbon"
+        ribbonSize="small"
+        ribbonColor="secondary"
+      />
+    )
+    const ribbon = screen.getByText(/My Ribbon/i)
+
+    expect(ribbon).toBeInTheDocument()
+    expect(ribbon).toHaveStyle({ backgroundColor: '#3CD3C1' })
+    expect(ribbon).toHaveStyle({
+      height: '2.6rem',
+      fontSize: '1.2rem'
     })
   })
 })

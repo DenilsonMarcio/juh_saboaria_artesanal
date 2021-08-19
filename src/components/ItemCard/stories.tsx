@@ -10,6 +10,15 @@ export default {
     price: 'R$ 25,00',
     promotionalPrice: 'R$ 20,00',
     img: 'https://source.unsplash.com/user/willianjusten/300x140'
+  },
+  argTypes: {
+    onFav: { action: 'clicked' },
+    ribbon: { type: 'string' }
+  },
+  parameters: {
+    backgrounds: {
+      default: 'dark'
+    }
   }
 } as Meta
 
@@ -18,3 +27,15 @@ export const Default: Story<ItemCardProps> = (args) => (
     <ItemCard {...args} />
   </div>
 )
+
+export const WithRibbon: Story<ItemCardProps> = (args) => (
+  <div style={{ maxWidth: '104rem' }}>
+    <ItemCard {...args} />
+  </div>
+)
+
+WithRibbon.args = {
+  ribbon: '20% off',
+  ribbonColor: 'primary',
+  ribbonSize: 'normal'
+}
