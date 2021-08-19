@@ -5,15 +5,15 @@ export default {
   title: 'Main',
   component: Main,
   args: {
-    title: 'title default',
-    description: 'description default'
+    title: 'Sabonetes Artesanais',
+    description: 'Sabonetes produzidos com materiais orgânicos'
   }
 } as Meta
 
 export const Basic: Story = (args) => <Main {...args} />
 Basic.args = {
-  title: 'title basic',
-  description: 'description basic'
+  title: 'Sabonetes Artesanais',
+  description: 'Sabonetes produzidos com materiais orgânicos'
 }
 
 export const Default: Story = (args) => <Main {...args} />
