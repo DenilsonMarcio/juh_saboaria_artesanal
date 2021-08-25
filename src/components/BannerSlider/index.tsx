@@ -13,7 +13,11 @@ const settings = {
   infinite: false,
   responsive: [
     {
-      breakpoint: 1170
+      breakpoint: 1170,
+      settings: {
+        vertical: false,
+        verticalSwiping: false
+      }
     }
 
   ]
