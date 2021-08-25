@@ -26,13 +26,3 @@ export const Default: Story<RibbonProps> = (args) => (
     <Ribbon {...args}/>
   </div>
 )
-
-
-// import { Story, Meta } from '@storybook/react/types-6-0'
-// import Ribbon, { RibbonProps } from '.'
-
-// export default {
- 
-// } as Meta
-
-// export const Default: Story<RibbonProps> = (args) => <Ribbon {...args} />
