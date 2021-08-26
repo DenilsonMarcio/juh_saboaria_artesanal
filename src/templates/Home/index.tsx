@@ -5,7 +5,7 @@ import { Container } from 'components/Container'
 import Footer from 'components/Footer'
 import Heading from 'components/Heading'
 import Highligth, { HighlightProps } from 'components/Highligth'
-import ItemCard, { ItemCardProps } from 'components/ItemCard'
+import { ItemCardProps } from 'components/ItemCard'
 import ItemCardSlider from 'components/ItemCardSlider'
 import Menu from 'components/Menu'
 
@@ -28,39 +28,52 @@ const Home = ({
   <section>
     <Container>
       <Menu />
-      <BannerSlider items={banners}/>
+      <S.SectionBanner>
+        <BannerSlider items={banners} />
+      </S.SectionBanner>
     </Container>
 
-    <Container>
-      <Heading lineLeft lineColor="secondary" color="white">
-      Novidades
-      </Heading>
-      <ItemCardSlider items={newItems} />
-    </Container>
+    <S.SectionNews>
+      <Container>
+        <Heading lineLeft lineColor="secondary" color="white">
+          Novidades
+        </Heading>
+        <ItemCardSlider items={newItems} />
+      </Container>
+    </S.SectionNews>
 
     <Container>
       <Heading lineLeft lineColor="secondary">
         Mais Vendidos
       </Heading>
-      <Highligth {...bestSellersHightLight}/>
-      <ItemCardSlider items={bestSellerItem} color="white"/>
+      <Highligth {...bestSellersHightLight} />
+      <S.SectionBestSellers>
+        <ItemCardSlider items={bestSellerItem} color="white" />
+      </S.SectionBestSellers>
     </Container>
 
-    <Container>
+    {/* <Container>
       <Heading lineLeft lineColor="secondary">
         Blog
       </Heading>
     </Container>
 
     <Container>
-      <Heading lineLeft lineColor="secondary">
-        Nossas Redes
+      <Heading lineLeft lineColor="secondary" color="white">
+        Nosso Instagram
       </Heading>
-    </Container>
+      <h1>Foto</h1>
+      <h1>Foto</h1>
+      <h1>Foto</h1>
+      <h1>Foto</h1>
+      <h1>Foto</h1>
+    </Container> */}
 
-    <Container>
-      <Footer />
-    </Container>
+    <S.SectionFooter>
+      <Container>
+        <Footer />
+      </Container>
+    </S.SectionFooter>
   </section>
 )
 

@@ -13,7 +13,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#06092B" />
+        <meta name="theme-color" content="#00A4CCFF" />
         <meta
           name="description"
           content="Um site feito para você que gosta de se cuidar, com produtos artesanais que não agridem sua pele e ainda mantém o ambiente seguro."

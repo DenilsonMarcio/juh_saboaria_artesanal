@@ -5,7 +5,7 @@ export default [
     subtitle: '<p>Compre agora seu sabonete</p>',
     buttonLabel: 'Compre agora',
     buttonLink: '/categories/sabonete-1',
-    ribbon: 'Mais Vendido'
+    ribbon: 'Novidade'
   },
   {
     img: 'https://source.unsplash.com/user/willianjusten/1042x581',
@@ -21,7 +21,7 @@ export default [
     subtitle: '<p>Compre agora seu sabonete</p>',
     buttonLabel: 'Compre agora',
     buttonLink: '/categories/sabonete-3',
-    ribbon: 'Mais Vendido'
+    ribbon: '20% OFF'
   },
 
 ]
