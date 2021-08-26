@@ -1,16 +1,12 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import Highligth, { HighlightProps } from '.'
 
+import item from './mock'
+
 export default {
   title: 'Highligth',
   component: Highligth,
-  args: {
-    title: 'Sabonete de Morango',
-    subtitle: 'Feito com essencias naturais da fruta',
-    backgroundImage: '/img/red-dead-img.jpg',
-    buttonLabel: 'Comprar Agora',
-    buttonLink: '/produto2'
-  }
+  args: {...item}
 } as Meta
 
 export const Default: Story<HighlightProps> = (args) => (

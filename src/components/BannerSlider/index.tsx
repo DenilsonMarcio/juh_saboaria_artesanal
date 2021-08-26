@@ -11,7 +11,9 @@ const settings = {
   vertical: true,
   verticalSwiping: true,
   infinite: false,
-  responsive: [
+  autoplay: true,
+  autoplaySpeed: 5000,
+   responsive: [
     {
       breakpoint: 1170,
       settings: {

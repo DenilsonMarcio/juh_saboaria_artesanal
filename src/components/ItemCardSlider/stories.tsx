@@ -2,50 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { ItemCardProps } from 'components/ItemCard'
 import ItemCardSlider from '.'
 
-const items = [
-  {
-      title: 'Sabonetes',
-    description: 'Sabonete branco',
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    price: 235,
-    promotionalPrice: 215
-  },
-  {
-       title: 'Sabonetes',
-    description: 'Sabonete branco',
-    img: 'https://source.unsplash.com/user/willianjusten/300x141',
-    price: 235,
-    promotionalPrice: 215
-  },
-  {
-       title: 'Sabonetes',
-    description: 'Sabonete branco',
-    img: 'https://source.unsplash.com/user/willianjusten/300x142',
-    price: 235,
-    promotionalPrice: 215
-  },
-  {
-      title: 'Sabonetes',
-    description: 'Sabonete branco',
-    img: 'https://source.unsplash.com/user/willianjusten/300x143',
-    price: 235,
-    promotionalPrice: 215
-  },
-  {
-    title: 'Sabonetes',
-    description: 'Sabonete branco',
-    img: 'https://source.unsplash.com/user/willianjusten/300x144',
-    price: 235,
-    promotionalPrice: 215
-  },
-  {
-    title: 'Sabonetes',
-    description: 'Sabonete Azul',
-    img: 'https://source.unsplash.com/user/willianjusten/300x145',
-    price: 235,
-    promotionalPrice: 215
-  }
-]
+import items from './mock'
 
 export default {
   title: 'ItemCardSlider',
