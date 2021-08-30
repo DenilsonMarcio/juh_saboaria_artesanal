@@ -17,9 +17,6 @@
     "postinstall": "husky install",
     "prepare": "husky install"
   },
-  "husky": {
-    "src/**/*": ["pre-commit", "lint-staged"]
-  },
   "lint-staged": {
     "src/**/*": [
       "yarn lint --fix",
