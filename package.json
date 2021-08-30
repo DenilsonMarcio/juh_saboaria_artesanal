@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "test:ci": "jest --runInBand",
@@ -16,9 +17,13 @@
     "postinstall": "husky install",
     "prepare": "husky install"
   },
+  "husky": {
+    "src/**/*": ["pre-commit", "lint-staged"]
+  },
   "lint-staged": {
     "src/**/*": [
       "yarn lint --fix",
+      "yarn typecheck",
       "yarn test --findRelatedTests --bail"
     ]
   },

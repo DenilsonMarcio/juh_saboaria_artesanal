@@ -2,12 +2,12 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { ItemCardProps } from 'components/ItemCard'
 import ItemCardSlider from '.'
 
-import items from './mock'
+import { items as itemsMock} from './mock'
 
 export default {
   title: 'ItemCardSlider',
   component: ItemCardSlider,
-  args: { items },
+  args: { itemsMock },
   parameters: {
     layout: 'fullscreen',
     backgrounds: {

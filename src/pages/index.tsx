@@ -1,6 +1,6 @@
 import Home, { HomeTemplateProps } from "templates/Home";
 import bannersMock from 'components/BannerSlider/mock'
-import itemsMock from 'components/ItemCardSlider/mock'
+import {items as itemsMock} from 'components/ItemCardSlider/mock'
 import highligthMock from "components/Highligth/mock";
 
 export default function Index(props: HomeTemplateProps) {

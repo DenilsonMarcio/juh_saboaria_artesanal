@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
 import bannerMock from 'components/BannerSlider/mock'
-import itemsMock from 'components/ItemCardSlider/mock'
+import { items as itemsMock } from 'components/ItemCardSlider/mock'
 import highlightMock from 'components/Highligth/mock'
 
 import Home from '.'
