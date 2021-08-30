@@ -23,6 +23,6 @@ export const Default: Story<RibbonProps> = (args) => (
       backgroundColor: '#888'
     }}
   >
-    <Ribbon {...args}/>
+    <Ribbon {...args} />
   </div>
 )

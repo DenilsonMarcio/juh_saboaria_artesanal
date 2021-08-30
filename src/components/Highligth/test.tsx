@@ -50,29 +50,26 @@ describe('<Highligth />', () => {
     const { container } = renderWitheTheme(<Highligth {...props} />)
 
     expect(container.firstChild).toHaveStyleRule(
-     'grid-template-areas',
-      "'floatImage content'",
+      'grid-template-areas',
+      "'floatImage content'"
     )
 
-    expect(container.firstChild).toHaveStyleRule(
-      'text-align',
-      'right',
-      {modifier: `${S.Content}`}
-     )
-     
+    expect(container.firstChild).toHaveStyleRule('text-align', 'right', {
+      modifier: `${S.Content}`
+    })
   })
 
   it('should render align left on alignment ', () => {
-    const { container } = renderWitheTheme(<Highligth {...props} alignment="left" />)
+    const { container } = renderWitheTheme(
+      <Highligth {...props} alignment="left" />
+    )
 
     expect(container.firstChild).toHaveStyleRule(
-     'grid-template-areas',
-      "'content floatImage'",
+      'grid-template-areas',
+      "'content floatImage'"
     )
-    expect(container.firstChild).toHaveStyleRule(
-      'text-align',
-      'left',
-      {modifier: `${S.Content}`}
-     )
+    expect(container.firstChild).toHaveStyleRule('text-align', 'left', {
+      modifier: `${S.Content}`
+    })
   })
 })

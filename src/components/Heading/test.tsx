@@ -42,9 +42,11 @@ describe('<Heading />', () => {
     expect(screen.getByRole('heading', { name: /Juju Soap/i })).toHaveStyle({
       'font-size': '1.6rem'
     })
-    expect(
-      screen.getByRole('heading', { name: /Juju Soap/i })
-    ).toHaveStyleRule('width', '3rem', { modifier: '::after' })
+    expect(screen.getByRole('heading', { name: /Juju Soap/i })).toHaveStyleRule(
+      'width',
+      '3rem',
+      { modifier: '::after' }
+    )
   })
   it('should render a Heading with a primary line color', () => {
     renderWitheTheme(

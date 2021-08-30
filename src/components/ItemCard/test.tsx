@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import theme from 'styles/theme'
 import { renderWitheTheme } from 'utils/tests/helpers'
 

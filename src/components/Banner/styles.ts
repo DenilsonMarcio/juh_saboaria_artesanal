@@ -4,9 +4,9 @@ import styled, { css } from 'styled-components'
 import * as RibbonStyles from 'components/Ribbon/styles'
 
 export const Wrapper = styled.main`
-position: relative;
+  position: relative;
 
-${media.lessThan('large')`
+  ${media.lessThan('large')`
 ${RibbonStyles.Wrapper}{
   right: 0;
   &::before {
