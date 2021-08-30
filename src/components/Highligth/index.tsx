@@ -19,7 +19,6 @@ const Highligth = ({
   backgroundImage,
   floatImage,
   alignment = 'right'
-
 }: HighlightProps) => (
   <S.Wrapper alignment={alignment} backgroundImage={backgroundImage}>
     {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}

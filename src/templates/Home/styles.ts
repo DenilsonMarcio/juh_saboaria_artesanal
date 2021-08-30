@@ -5,6 +5,7 @@ import * as HeadingStyles from 'components/Heading/styles'
 import * as ItemCardSliderStyles from 'components/ItemCardSlider/styles'
 import * as HighlightStyles from 'components/Heading/styles'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Sections = styled.section`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper},

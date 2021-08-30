@@ -1,33 +1,33 @@
 import 'match-media-mock'
-import {  screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
 import ItemCardSlider from '.'
 
 const items = [
   {
-      title: 'Sabonetes',
+    title: 'Sabonetes',
     description: 'Sabonete branco',
     img: 'https://source.unsplash.com/user/willianjusten/300x140',
     price: '235',
     promotionalPrice: '215'
   },
   {
-       title: 'Sabonetes',
+    title: 'Sabonetes',
     description: 'Sabonete branco',
     img: 'https://source.unsplash.com/user/willianjusten/300x141',
     price: '235',
     promotionalPrice: '215'
   },
   {
-       title: 'Sabonetes',
+    title: 'Sabonetes',
     description: 'Sabonete branco',
     img: 'https://source.unsplash.com/user/willianjusten/300x142',
     price: '235',
     promotionalPrice: '215'
   },
   {
-      title: 'Sabonetes',
+    title: 'Sabonetes',
     description: 'Sabonete branco',
     img: 'https://source.unsplash.com/user/willianjusten/300x143',
     price: '235',
@@ -48,7 +48,6 @@ const items = [
     promotionalPrice: '215'
   }
 ]
-
 
 describe('<ItemSlider />', () => {
   it('should render with 4 active items', () => {

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
 import Ribbon from '.'

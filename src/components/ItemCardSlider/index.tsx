@@ -9,7 +9,7 @@ import * as S from './styles'
 const settings: SliderSettings = {
   arrows: true,
   slidesToShow: 4,
-   infinite: true,
+  infinite: true,
   autoplay: true,
   autoplaySpeed: 10000,
   lazyLoad: 'ondemand',

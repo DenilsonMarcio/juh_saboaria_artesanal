@@ -1,13 +1,13 @@
-import Home, { HomeTemplateProps } from "templates/Home";
+import Home, { HomeTemplateProps } from 'templates/Home'
 import bannersMock from 'components/BannerSlider/mock'
-import itemsMock from 'components/ItemCardSlider/mock'
-import highligthMock from "components/Highligth/mock";
+import { items as itemsMock } from 'components/ItemCardSlider/mock'
+import highligthMock from 'components/Highligth/mock'
 
 export default function Index(props: HomeTemplateProps) {
-  return <Home {...props}/>;
+  return <Home {...props} />
 }
 
-export function getServerSideProps(){
+export function getServerSideProps() {
   return {
     props: {
       banners: bannersMock,

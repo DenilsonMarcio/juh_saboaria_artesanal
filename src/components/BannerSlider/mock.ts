@@ -22,6 +22,5 @@ export default [
     buttonLabel: 'Compre agora',
     buttonLink: '/categories/sabonete-3',
     ribbon: '20% OFF'
-  },
-
+  }
 ]

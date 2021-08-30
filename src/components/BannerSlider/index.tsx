@@ -1,4 +1,4 @@
-import Slider, {SliderSettings} from 'components/Slider'
+import Slider from 'components/Slider'
 import Banner, { BannerProps } from '../../components/Banner'
 import * as S from './styles'
 
@@ -13,7 +13,7 @@ const settings = {
   infinite: false,
   autoplay: true,
   autoplaySpeed: 5000,
-   responsive: [
+  responsive: [
     {
       breakpoint: 1170,
       settings: {
@@ -21,9 +21,7 @@ const settings = {
         verticalSwiping: false
       }
     }
-
   ]
-
 }
 
 const BannerSlider = ({ items }: BannerSliderProps) => (

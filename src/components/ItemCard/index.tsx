@@ -39,6 +39,7 @@ const ItemCard = ({
       </Ribbon>
     )}
     <S.ImageBox>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={img} alt={title} />
     </S.ImageBox>
     <S.Content>
@@ -47,7 +48,11 @@ const ItemCard = ({
         <S.Description>{description}</S.Description>
       </S.Info>
       <S.FavButton role="button" onClick={onFav}>
-       {favorite ? <Favorite aria-label="remove from wishlist" /> :  <FavoriteBorder aria-label="Adicionar ao carrinho de compras" />}
+        {favorite ? (
+          <Favorite aria-label="remove from wishlist" />
+        ) : (
+          <FavoriteBorder aria-label="Adicionar ao carrinho de compras" />
+        )}
       </S.FavButton>
       <S.BuyBox>
         {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
