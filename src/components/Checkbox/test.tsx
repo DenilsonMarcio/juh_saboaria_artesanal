@@ -1,4 +1,7 @@
 import { screen } from '@testing-library/react'
+import { waitFor } from '@testing-library/dom'
+import userEvent from '@testing-library/user-event'
+import theme from 'styles/theme'
 import { renderWitheTheme } from 'utils/tests/helpers'
 
 import Checkbox from '.'
@@ -10,5 +13,33 @@ describe('<Checkbox />', () => {
     expect(screen.getByRole('checkbox')).toBeInTheDocument()
     expect(screen.getByLabelText(/checkbox Label/i)).toBeInTheDocument()
     expect(screen.getByText(/checkbox label/i)).toHaveAttribute('for', 'check')
+  })
+
+  it('should render without label', () => {
+    renderWitheTheme(<Checkbox />)
+
+    expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument()
+  })
+
+  it('should render with black label', () => {
+    renderWitheTheme(
+      <Checkbox label="checkbox label" labelFor="check" labelColor="black" />
+    )
+
+    expect(screen.getByText(/checkbox label/i)).toHaveStyle({
+      color: theme.colors.black
+    })
+  })
+
+  it('should dispatch onCheck when status changes', async () => {
+    const onCheck = jest.fn()
+
+    renderWitheTheme(<Checkbox label="checkbox" onCheck={onCheck} />)
+
+    // Espero que ela não tenha sido chamada ainda
+    expect(onCheck).not.toHaveBeenCalled()
+
+    userEvent.click(screen.getByRole('checkbox'))
+    await waitFor(() => expect(onCheck).toHaveBeenCalledTimes(1))
   })
 })
