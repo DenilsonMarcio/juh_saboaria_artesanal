@@ -41,5 +41,29 @@ describe('<Checkbox />', () => {
 
     userEvent.click(screen.getByRole('checkbox'))
     await waitFor(() => expect(onCheck).toHaveBeenCalledTimes(1))
+
+    expect(onCheck).toHaveBeenCalledWith(true)
+  })
+
+  it('should dispatch onCheck when status changes', async () => {
+    const onCheck = jest.fn()
+
+    renderWitheTheme(<Checkbox label="checkbox" onCheck={onCheck} isChecked />)
+
+    userEvent.click(screen.getByRole('checkbox'))
+    await waitFor(() => expect(onCheck).toHaveBeenCalledTimes(1))
+    expect(onCheck).toHaveBeenCalledWith(false)
+  })
+
+  it('should be accessible with tab', () => {
+    renderWitheTheme(<Checkbox label="Checkbox" labelFor="Checkbox" />)
+
+    expect(document.body).toHaveFocus()
+
+    //evento pra acessar o proximo elemento
+    userEvent.tab()
+
+    // espero que  a label esteja em foco
+    expect(screen.getByLabelText('Checkbox')).toHaveFocus()
   })
 })
