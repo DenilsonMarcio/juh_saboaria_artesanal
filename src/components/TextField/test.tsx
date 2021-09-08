@@ -1,3 +1,4 @@
+import { Email } from '@styled-icons/material-outlined'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -22,6 +23,19 @@ describe('<TextField />', () => {
     renderWitheTheme(<TextField placeholder="ola voce" />)
 
     expect(screen.getByPlaceholderText('ola voce')).toBeInTheDocument()
+  })
+
+  it('should render with icon', () => {
+    renderWitheTheme(<TextField icon={<Email data-testid="icon" />} />)
+
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should be renders with icon on the right side', () => {
+    renderWitheTheme(
+      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />
+    )
+    expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 })
   })
 
   it('should changes its value when typing', async () => {
