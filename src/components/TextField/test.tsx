@@ -60,6 +60,45 @@ describe('<TextField />', () => {
     expect(onInput).toHaveBeenCalledWith(text)
   })
 
+  it('Does not changes its value when disabled', async () => {
+    const onInput = jest.fn()
+    renderWitheTheme(
+      <TextField
+        onInput={onInput}
+        label="TextField"
+        labelFor="TextField"
+        id="TextField"
+        disabled
+        error="false"
+      />
+    )
+
+    const input = screen.getByRole('textbox')
+    expect(input).toBeDisabled()
+
+    const text = 'This is my new test'
+    userEvent.type(input, text)
+
+    await waitFor(() => {
+      expect(input).not.toHaveValue(text)
+    })
+    expect(onInput).not.toHaveBeenCalled()
+  })
+
+  it('Render with error', () => {
+    const { container } = renderWitheTheme(
+      <TextField
+        label="TextField"
+        labelFor="TextField"
+        id="TextField"
+        error="Error message"
+      />
+    )
+
+    expect(screen.getByText('Error message')).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
   it('should accessible my tab', () => {
     renderWitheTheme(
       <TextField label="TextField" labelFor="TextField" id="TextField" />
@@ -70,5 +109,22 @@ describe('<TextField />', () => {
 
     userEvent.tab()
     expect(input).toHaveFocus()
+  })
+
+  it('Is not accessible by tab when disabled', () => {
+    renderWitheTheme(
+      <TextField
+        label="TextField"
+        labelFor="TextField"
+        id="TextField"
+        disabled
+      />
+    )
+
+    const input = screen.getByLabelText('TextField')
+    expect(document.body).toHaveFocus()
+
+    userEvent.tab()
+    expect(input).not.toHaveFocus()
   })
 })
