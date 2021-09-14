@@ -6,10 +6,14 @@ const wrapperModifiers = {
   normal: () => css`
     width: 11rem;
     height: 3.3rem;
+    // tirar essa margin se trocar o SVG
+    margin-bottom: 60px;
   `,
   large: () => css`
     width: 20rem;
     height: 5.9rem;
+    // tirar essa margin se trocar o SVG
+    margin-bottom: 80px;
   `
 }
 
