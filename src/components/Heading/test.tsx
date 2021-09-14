@@ -48,6 +48,14 @@ describe('<Heading />', () => {
       { modifier: '::after' }
     )
   })
+
+  it('should render a heading with a huge size', () => {
+    renderWitheTheme(<Heading size="huge">Juju Soap</Heading>)
+    expect(screen.getByRole('heading', { name: /Juju Soap/i })).toHaveStyle({
+      'font-size': '5.2rem'
+    })
+  })
+
   it('should render a Heading with a primary line color', () => {
     renderWitheTheme(
       <Heading lineColor="primary" lineLeft lineBottom>

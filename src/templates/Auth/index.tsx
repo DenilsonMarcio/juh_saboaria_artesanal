@@ -14,7 +14,9 @@ const Auth = ({ children, title }: AuthProps) => (
         <Logo />
 
         <div>
-          <Heading>Shampoos e Sabonetes feitos com produtos naturais</Heading>
+          <Heading size="huge">
+            Shampoos e Sabonetes feitos com produtos naturais
+          </Heading>
           <S.Subtitle>
             Arte em <strong>Saboaria Artesanal</strong>
           </S.Subtitle>
