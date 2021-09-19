@@ -35,7 +35,7 @@ display: none;
       bottom: 0;
       right: 0;
       background: ${theme.colors.black};
-      opacity: 0.8;
+      opacity: 0.7;
     }
   `}
 `
