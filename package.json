@@ -42,7 +42,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-typescript": "^7.12.7",
-    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-controls": "^6.3.4",
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-links": "^6.3.4",
