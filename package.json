@@ -24,7 +24,7 @@
     ]
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^11.1.0",
+    "@next/eslint-plugin-next": "^13.0.1",
     "@styled-icons/boxicons-solid": "^10.34.0",
     "@styled-icons/fa-brands": "^10.28.0",
     "@styled-icons/material-outlined": "^10.28.0",
